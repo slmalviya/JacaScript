@@ -25,3 +25,16 @@ click.addEventListener("click", sayHello);
 function sayHello() {
     alert("Haanji hum dab gye haii chod do");
 }
+
+
+let par = document.querySelector("p");
+let box = document.querySelector(".box");
+
+par.addEventListener("click", function(){
+    par.innerText = "Heyy Muje Touch kyu kar rahe ho bhaii";
+});
+
+box.addEventListener("click", function(){
+    box.style.backgroundColor = "red";
+});
+
