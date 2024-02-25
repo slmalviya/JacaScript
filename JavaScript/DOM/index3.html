@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        .completed {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <h2>To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="Enter a new task">
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList">
+        <!-- Tasks will be dynamically added here -->
+    </ul>
+
+    <script>
+        function addTask() {
+            const input = document.getElementById('taskInput');
+            const taskText = input.value.trim();
+
+            if (taskText !== '') {
+                const listItem = document.createElement('li');
+                const taskSpan = document.createElement('span');
+                const deleteBtn = document.createElement('button');
+                const completeBtn = document.createElement('button');
+
+                taskSpan.textContent = taskText;
+                deleteBtn.textContent = '❌';
+                completeBtn.textContent = '✓';
+
+                deleteBtn.onclick = function() {
+                    listItem.remove();
+                };
+
+                completeBtn.onclick = function() {
+                    taskSpan.classList.toggle('completed');
+                };
+
+                listItem.appendChild(taskSpan);
+                listItem.appendChild(deleteBtn);
+                listItem.appendChild(completeBtn);
+
+                document.getElementById('taskList').appendChild(listItem);
+                input.value = '';
+            }
+        }
+    </script>
+</body>
+</html>
