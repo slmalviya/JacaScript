@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        height: 100px;
+        width: 500px;
+        border: 10px;
+        border-radius: 5px;
+        box-shadow: 10px 10px red;
+    }
+</style>
+<body>
+    <p>Heyy this is the finest Great things in the HTML laguage</p>
+    <h1>haanji muje dbao me jadu dikhata hu tuje </h1>
+
+    <script>
+        let p = document.querySelector("p");
+        let btn = document.querySelector("h1");
+
+        p.addEventListener("click",yes)
+           
+      
+      function yes(){
+        console.log("Hi this is the paragraph");
+        p.innerText="This is the fastest paragraph";
+      };
+    
+      btn.addEventListener("click", function(){
+        btn.innerHTML = "this is the H1 Tag !"
+      })
+
+      btn.addEventListener("click", function(){
+        btn.style.backgroundColor = "green";
+      })
+    </script>
+</body>
+</html>
