@@ -37,10 +37,10 @@ function savetoDB(data){
   return new Promise((success, failure) => {
     let internetSpeed = Math.floor(Math.random() * 10) +1;
     if(internetSpeed >4){
-      success();
+      success("Success : data was saved into database:");
     }
     else{
-      failure();
+      failure("failure : weak Connection");
     }
   })
 }

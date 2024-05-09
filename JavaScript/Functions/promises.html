@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>
+    this is the web page for the test!!!
+  </h1>
+  <script>
+    function savetoDB(data) {
+      return new Promise((success, failure) => {
+        let internetSpeed = Math.floor(Math.random() * 10) + 1;
+        if (internetSpeed > 4) {
+          success("Success : data was saved into database:");
+        } else {
+          failure("failure : weak Connection");
+        }
+      });
+    }
+    
+    savetoDB("someData")
+      .then((message) => {
+        console.log("data was saved");
+        console.log(message); // Output: "Success : data was saved into database:"
+      })
+      .catch((error) => {
+        console.log("data was not saved");
+        console.error(error); // Output: "failure : weak Connection"
+      });
+
+  </script>
+</body>
+
+</html>
