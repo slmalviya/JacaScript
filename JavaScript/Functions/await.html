@@ -15,7 +15,7 @@
         function changeColor(color, delay) {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
-                    h1.style.color = color; 
+                    h1.style.color = color;
                     console.log(`Color changed to ${color}`);
                     resolve("Color changed");
                 }, delay);
@@ -28,6 +28,7 @@
             await changeColor("blue", 1000);
             await changeColor("pink", 1000);
             await changeColor("yellow", 1000); // Added await here
+            await changeColor("darkblue", 1000);
         }
         
         // Call the demo function to execute it
